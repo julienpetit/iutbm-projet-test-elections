@@ -17,6 +17,6 @@ public class Launcher {
         int nbPostes= Integer.parseInt(args[2]);
 
         new Election(nbCandidats, nbVotant, nbPostes).ouvertureBureaux();
-            }
+    }
 
 }

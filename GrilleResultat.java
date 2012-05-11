@@ -5,6 +5,7 @@ public class GrilleResultat {
     private Map<Candidat, Integer> resultat;
 
     public GrilleResultat(Set<Candidat> candidats) {
+        this.resultat = new HashMap<Candidat, Integer>();
         for (Candidat candidat : candidats) {
             resultat.put(candidat, 0);
         }
