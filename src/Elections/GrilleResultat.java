@@ -1,3 +1,5 @@
+package Elections;
+
 import java.util.*;
 
 public class GrilleResultat {
@@ -5,7 +7,7 @@ public class GrilleResultat {
     private Map<Candidat, Integer> resultat;
 
     public GrilleResultat(Set<Candidat> candidats) {
-        this.resultat = new HashMap<Candidat, Integer>();
+        this.resultat = new HashMap<Candidat, Integer>();    // Ajouté
         for (Candidat candidat : candidats) {
             resultat.put(candidat, 0);
         }
