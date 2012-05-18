@@ -52,5 +52,4 @@ public class Election {
         }
         return candidats;
     }
-
 }
