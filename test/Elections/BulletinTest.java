@@ -1,5 +1,6 @@
 package Elections;
 
+import com.sun.source.tree.AssertTree;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -18,11 +19,20 @@ public class BulletinTest {
     @Test
     public void testBulletin()
     {
+        // Test méthode vraie
         Bulletin unBulletin = new Bulletin();
 
         Candidat unCandidat = new Candidat("Hollande");
         unBulletin.addCandidat(unCandidat);
         Assert.assertTrue(unBulletin.getCandidats().contains(unCandidat));
+
+
+        // Test méthode fausse
+        Bulletin un2emeBulletin = new Bulletin();
+
+        Candidat un2emeCandidat = new Candidat("Sarko");
+        un2emeBulletin.addCandidat(un2emeCandidat);
+        Assert.assertFalse(un2emeBulletin.getCandidats().contains(unCandidat));
     }
 
 }
