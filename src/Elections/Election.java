@@ -17,8 +17,8 @@ public class Election {
         Set<Candidat> candidats;
         Set<Votant> votants;
 
-        candidats = initialiseCandidats(nbCandidats);
-        votants = initialiseVotants(nbVotant);
+        candidats = InitialiseElection.initialiseCandidats(nbCandidats);
+        votants = InitialiseElection.initialiseVotants(nbVotant);
 
         //Votes
         Urne lurne = new Urne();
@@ -35,21 +35,5 @@ public class Election {
         for (Map.Entry<Candidat, Integer> annonce : annonces) {
             System.out.println(annonce.getKey()+" "+ annonce.getValue()+ "\n");
         }
-    }
-
-    private static Set<Votant> initialiseVotants(int nbVotant) {
-        Set<Votant> votant = new HashSet<Votant>();
-        for (int i = 0; i < nbVotant; i++) {
-            votant.add(new Votant(i));
-        }
-        return votant;
-    }
-
-    private static Set<Candidat> initialiseCandidats(int nbCandidats) {
-        Set<Candidat> candidats = new HashSet<Candidat>();
-        for (int i = 0; i < nbCandidats; i++) {
-            candidats.add(new Candidat("candidat" + i));
-        }
-        return candidats;
     }
 }

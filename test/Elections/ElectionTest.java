@@ -1,5 +1,11 @@
 package Elections;
 
+import junit.framework.Assert;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created with IntelliJ IDEA.
  * User: julienpetit
@@ -9,4 +15,22 @@ package Elections;
  */
 public class ElectionTest {
 
+    @Test
+    public void testInitialiseCandidats()
+    {
+        int nbCandidats = 3;
+        int nbVotants = 100;
+        int nbPostes = 4;
+
+        Election election = new Election(nbCandidats, nbVotants, nbPostes);
+
+
+        Set<Candidat> candidats = InitialiseElection.initialiseCandidats(nbCandidats);
+        System.out.println(candidats);
+
+        for (int i = 0; i < nbCandidats; i++) {
+            String name = "candidat" + i;
+            Assert.assertTrue(candidats.contains(new Candidat(name)));
+        }
+    }
 }
