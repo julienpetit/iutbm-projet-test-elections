@@ -14,8 +14,6 @@ import java.util.*;
  */
 public class GrilleResultatTest{
 
-    private Object valeurs2;
-
     @Test
     public void GrilleResultatTest(){
         Candidat c1 = new Candidat("Hollande");
