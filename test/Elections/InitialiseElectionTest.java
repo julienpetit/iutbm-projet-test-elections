@@ -13,7 +13,7 @@ import java.util.Set;
  * Time: 11:46 AM
  * To change this template use File | Settings | File Templates.
  */
-public class ElectionTest {
+public class InitialiseElectionTest {
 
     @Test
     public void testInitialiseCandidats()
@@ -24,13 +24,28 @@ public class ElectionTest {
 
         Election election = new Election(nbCandidats, nbVotants, nbPostes);
 
-
         Set<Candidat> candidats = InitialiseElection.initialiseCandidats(nbCandidats);
-        System.out.println(candidats);
 
         for (int i = 0; i < nbCandidats; i++) {
             String name = "candidat" + i;
             Assert.assertTrue(candidats.contains(new Candidat(name)));
+        }
+    }
+
+    @Test
+    public void testInitialiseVotants()
+    {
+        int nbCandidats = 3;
+        int nbVotants = 100;
+        int nbPostes = 4;
+
+        Election election = new Election(nbCandidats, nbVotants, nbPostes);
+
+
+        Set<Votant> votants = InitialiseElection.initialiseVotants(nbVotants);
+
+        for (int i = 0; i < nbVotants; i++) {
+            Assert.assertTrue(votants.contains(new Votant(i)));
         }
     }
 }

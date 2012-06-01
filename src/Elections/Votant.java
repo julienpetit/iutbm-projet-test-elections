@@ -39,4 +39,20 @@ public class Votant {
     {
         return aVoté;
     }
+
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o instanceof Votant)
+            return aVoté == ((Votant) o).aVoté && numeroOrdre == ((Votant) o).numeroOrdre;
+        else
+            return false;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return new Integer(numeroOrdre).hashCode();
+    }
 }

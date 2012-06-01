@@ -56,7 +56,7 @@ public class GrilleResultatTest{
         System.out.println(b5.getCandidats());
 
         grilleResultat.depouillement(bulletins);
-        System.out.println(grilleResultat.prepareAnnonce());
+        //System.out.println(grilleResultat.prepareAnnonce());
 
     }
 }
