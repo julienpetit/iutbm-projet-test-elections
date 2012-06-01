@@ -13,7 +13,7 @@ import java.util.Set;
  * Time: 11:46 AM
  * To change this template use File | Settings | File Templates.
  */
-public class ElectionTest {
+public class InitialiseElectionTest {
 
     @Test
     public void testInitialiseCandidats()
