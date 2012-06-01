@@ -38,7 +38,6 @@ public class Votant {
         return aVoté;
     }
 
-
     @Override
     public boolean equals(Object o)
     {
