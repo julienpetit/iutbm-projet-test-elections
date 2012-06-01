@@ -15,8 +15,6 @@ public class CandidatTest {
     @Test
     public void TestCandidat(){
         Candidat candidat = new Candidat("Hollande");
-        Candidat candidat2 = new Candidat("Obama");
         Assert.assertEquals(candidat.toString(),"Hollande");
-        Assert.assertFalse(candidat.equals(13));
     }
 }

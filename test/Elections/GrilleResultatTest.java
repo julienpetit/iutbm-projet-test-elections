@@ -66,7 +66,7 @@ public class GrilleResultatTest{
         System.out.println(b5.getCandidats());
 
         grilleResultat.depouillement(bulletins);
-        System.out.println(grilleResultat.prepareAnnonce());
+        //System.out.println(grilleResultat.prepareAnnonce());
 
         Assert.assertTrue(grilleResultat.prepareAnnonce().first().getValue()>grilleResultat.prepareAnnonce().last().getValue());
         Assert.assertTrue(grilleResultat.prepareAnnonce().first().getKey().equals(c2) && grilleResultat.prepareAnnonce().first().getValue().equals(3));

@@ -33,15 +33,4 @@ public class ElectionTest {
             Assert.assertTrue(candidats.contains(new Candidat(name)));
         }
     }
-    @Test
-    public  void testOuvertureBureau(){
-
-        int nbCandidats = 3;
-        int nbVotants = 100;
-        int nbPostes = 4;
-
-        Election election = new Election(nbCandidats, nbVotants, nbPostes);
-
-        election.ouvertureBureaux();
-    }
 }
