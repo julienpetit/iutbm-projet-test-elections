@@ -40,4 +40,8 @@ public class GrilleResultat {
         annonces.addAll(resultat.entrySet());
         return annonces;
     }
+
+    public Map<Candidat, Integer> getResultat(){
+        return resultat;
+    }
 }

@@ -35,6 +35,12 @@ public class GrilleResultatTest{
 
         GrilleResultat grilleResultat = new GrilleResultat(candidats);
 
+        // On vérifie chaque candidats a un résultat nul pour le moment
+        HashMap<Candidat, Integer> resultats = (HashMap<Candidat, Integer>) grilleResultat.getResultat();
+        for (Map.Entry<Candidat, Integer> resultat : resultats.entrySet()) {
+            Assert.assertTrue(candidats.contains(resultat.getKey()) && resultat.getValue() == 0);
+        }
+
         Bulletin b1 = new Bulletin();
         Bulletin b2 = new Bulletin();
         Bulletin b3 = new Bulletin();
@@ -66,7 +72,12 @@ public class GrilleResultatTest{
         System.out.println(b5.getCandidats());
 
         grilleResultat.depouillement(bulletins);
-        //System.out.println(grilleResultat.prepareAnnonce());
+        System.out.println(grilleResultat.prepareAnnonce());
+
+        // On vérifie chaque résultat correspond pour chaque candidats
+        /*for (Map.Entry<Candidat, Integer> resultat : resultats.entrySet()) {
+            Assert.assertTrue(grilleResultat.getResultat())
+        }*/
 
         Assert.assertTrue(grilleResultat.prepareAnnonce().first().getValue()>grilleResultat.prepareAnnonce().last().getValue());
         Assert.assertTrue(grilleResultat.prepareAnnonce().first().getKey().equals(c2) && grilleResultat.prepareAnnonce().first().getValue().equals(3));
