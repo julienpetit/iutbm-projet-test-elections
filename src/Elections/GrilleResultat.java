@@ -30,9 +30,8 @@ public class GrilleResultat {
                 int compare = o2.getValue().compareTo(o1.getValue());
                 // On traite dans le cas ou deux candidats ont le même score
                 if (compare == 0){
-                    if (o2.getKey().equals(o1.getKey()))
-                        compare = 0;
-                    else
+                    // On compare les deux clés (nom du candidat) pour garder tout les candidats qui ont le même score
+                    if (!o2.getKey().equals(o1.getKey()))
                         compare = -1;
                 }
                 return compare;
