@@ -20,19 +20,13 @@ public class VotantTest {
     public void testVote()
     {
         Votant votant = new Votant(1);
-        int nbPostes = 2;
+        int nbPostes = 3;
         Candidat candidat1 = new Candidat("Pierre");
-        Candidat candidat2 = new Candidat("Paul");
-        Candidat candidat3 = new Candidat("François");
-        Candidat candidat4 = new Candidat("Nicolas");
 
         Set<Candidat> candidats = new HashSet<Candidat>();
         candidats.add(candidat1);
-        candidats.add(candidat2);
-        candidats.add(candidat3);
-        candidats.add(candidat4);
 
-        Assert.assertFalse(candidats.contains((votant.vote(candidats, nbPostes)).getCandidats()));
+        Assert.assertTrue((votant.vote(candidats, nbPostes)).getCandidats().contains(candidats.toArray()[0]));
     }
 
     @Test
