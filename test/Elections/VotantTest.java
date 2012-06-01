@@ -42,4 +42,21 @@ public class VotantTest {
         votant.declareVote();
         Assert.assertTrue(votant.getVote());
     }
+
+    @Test
+    public void testEquals()
+    {
+        int nbCandidats = 3;
+        int nbVotants = 100;
+        int nbPostes = 4;
+
+        Election election = new Election(nbCandidats, nbVotants, nbPostes);
+
+        Votant votant = new Votant(0);
+
+        Assert.assertEquals(votant, new Votant(0));
+        Assert.assertFalse(votant.equals(new Votant(1)));
+        Assert.assertFalse(votant.equals(new Integer(2)));
+
+    }
 }
