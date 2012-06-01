@@ -14,7 +14,16 @@ public class CandidatTest {
 
     @Test
     public void TestCandidat(){
+        // Candidat utilisé pour le test
         Candidat candidat = new Candidat("Hollande");
+
+        // Test de l'attriut name
         Assert.assertEquals(candidat.toString(),"Hollande");
+
+        // Test de la méthode equals
+        Assert.assertFalse(candidat.equals(new Candidat("sarko")));
+        Assert.assertTrue(candidat.equals(new Candidat("Hollande")));
+
+        Assert.assertFalse(candidat.equals(new Integer(3)));  // Test de instanceof
     }
 }
