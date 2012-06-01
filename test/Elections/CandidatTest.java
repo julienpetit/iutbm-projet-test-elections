@@ -13,7 +13,7 @@ import org.junit.Test;
 public class CandidatTest {
 
     @Test
-    public void CandidatTest(){
+    public void TestCandidat(){
         Candidat candidat = new Candidat("Hollande");
         Assert.assertEquals(candidat.toString(),"Hollande");
     }
