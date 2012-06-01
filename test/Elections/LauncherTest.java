@@ -16,7 +16,13 @@ public class LauncherTest {
     public void laucherTest()
     {
         Launcher laucher = new Launcher();
+        String[] argc = {"4","450"};
         String[] args = {"4","450", "10"};
+        try{
+            Launcher.main(argc);
+            Assert.fail();
+        }
+        catch (Exception e){}
         Launcher.main(args);
     }
 }
