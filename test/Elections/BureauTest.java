@@ -15,6 +15,13 @@ import java.util.Set;
 public class BureauTest {
 
     @Test
+    public void bureauElectionTest()
+    {
+        BureauElection be = new BureauElection();
+    }
+
+
+    @Test
     public void rempliUrneTest ()
     {
 

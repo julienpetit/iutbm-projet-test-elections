@@ -29,8 +29,6 @@ public class InitialiseElectionTest {
         int nbVotants = 100;
         int nbPostes = 4;
 
-        Election election = new Election(nbCandidats, nbVotants, nbPostes);
-
         Set<Candidat> candidats = InitialiseElection.initialiseCandidats(nbCandidats);
 
         for (int i = 0; i < nbCandidats; i++) {
@@ -45,9 +43,6 @@ public class InitialiseElectionTest {
         int nbCandidats = 3;
         int nbVotants = 100;
         int nbPostes = 4;
-
-        Election election = new Election(nbCandidats, nbVotants, nbPostes);
-
 
         Set<Votant> votants = InitialiseElection.initialiseVotants(nbVotants);
 

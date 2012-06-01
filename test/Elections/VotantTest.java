@@ -15,6 +15,7 @@ import java.util.Set;
  */
 public class VotantTest {
 
+
     @Test
     public void testVote()
     {
