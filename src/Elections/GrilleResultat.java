@@ -27,10 +27,18 @@ public class GrilleResultat {
         //Tri des résultats
         SortedSet<Map.Entry<Candidat,Integer>> annonces = new TreeSet<Map.Entry<Candidat,Integer>>(new Comparator<Map.Entry<Candidat, Integer>>() {
             public int compare(Map.Entry<Candidat, Integer> o1, Map.Entry<Candidat, Integer> o2) {
-                return o2.getValue().compareTo(o1.getValue());
+                int compare = o2.getValue().compareTo(o1.getValue());
+                // On traite dans le cas ou deux candidats ont le même score
+                if (compare == 0){
+                    if (o2.getKey().equals(o1.getKey()))
+                        compare = 0;
+                    else
+                        compare = -1;
+                }
+                return compare;
             }
         });
         annonces.addAll(resultat.entrySet());
-        return annonces;         
+        return annonces;
     }
 }

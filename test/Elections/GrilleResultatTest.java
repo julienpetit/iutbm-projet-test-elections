@@ -15,9 +15,10 @@ public class GrilleResultatTest{
 
     @Test
     public void GrilleResultatTest(){
-        Candidat c1 = new Candidat("Hollande");
+        Candidat c3 = new Candidat("Hollande");
         Candidat c2 = new Candidat("Sarkozy");
-        Candidat c3 = new Candidat("LePen");
+        Candidat c1 = new Candidat("LePen");
+        Candidat c4 = new Candidat("Obama");
 
         Set<Candidat> candidats = new HashSet<Candidat>();
 
@@ -38,8 +39,9 @@ public class GrilleResultatTest{
         b2.addCandidat(c3);
         b3.addCandidat(c3);
         b4.addCandidat(c2);
-        //b4.addCandidat(c1);
+        b4.addCandidat(c1);
         b5.addCandidat(c2);
+        //b5.addCandidat(c4);
 
         List<Bulletin> bulletins = new ArrayList<Bulletin>();
 
