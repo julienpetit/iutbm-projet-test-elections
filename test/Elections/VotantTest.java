@@ -31,7 +31,7 @@ public class VotantTest {
         candidats.add(candidat3);
         candidats.add(candidat4);
 
-        candidats.contains((votant.vote(candidats, nbPostes)).getCandidats());
+        Assert.assertFalse(candidats.contains((votant.vote(candidats, nbPostes)).getCandidats()));
     }
 
     @Test

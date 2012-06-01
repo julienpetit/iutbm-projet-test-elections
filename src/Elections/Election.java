@@ -21,11 +21,7 @@ public class Election {
         votants = InitialiseElection.initialiseVotants(nbVotant);
 
         //Votes
-        Urne lurne = new Urne();
-        for (Votant votant : votants) {
-            lurne.avoter(votant.vote(candidats, nbPostes));
-            votant.declareVote();
-        }
+        Urne lurne = BureauElection.rempliUrne(votants, candidats, nbPostes);
 
         //Dépouillement
         GrilleResultat resultat = new GrilleResultat(candidats);
