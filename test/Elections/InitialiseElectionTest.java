@@ -16,6 +16,12 @@ import java.util.Set;
 public class InitialiseElectionTest {
 
     @Test
+    public void testInitialiseElection()
+    {
+        InitialiseElection ie = new InitialiseElection();
+    }
+
+    @Test
     public void testInitialiseCandidats()
     {
         int nbCandidats = 3;
