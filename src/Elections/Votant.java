@@ -18,8 +18,6 @@ public class Votant {
 
         Bulletin bulletin = new Bulletin();
 
-        if(nbPostes < 0) return bulletin; // Ajout
-
         ArrayList<Candidat> candidatsAsList = new ArrayList<Candidat>(candidats);
 
         for (int i = 0; i < nbPostes; i++) {
